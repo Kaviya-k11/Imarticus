@@ -1,0 +1,17 @@
+Boston Dataset Analysis : Reading CSV file in Hive
+
+
+Reading file :  /*gs://Desktop/Imarticus/Big Data Hadoop _ Spark Exam/Dataset/boston.csv*/
+
+Creating Table :
+ 
+/*Create External table for boston_hive*/
+
+CREATE EXTERNAL TABLE boston (crim float, zn float,indus float,chas float,nox float,rm float,age float,dis float,rad float,tax float,pt float,b float,lstate float,mv float)
+
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\n'
+STORED AS TEXTFILE
+
+LOCATION 'gs://Desktop/Imarticus/Big Data Hadoop _ Spark Exam/Dataset/';
